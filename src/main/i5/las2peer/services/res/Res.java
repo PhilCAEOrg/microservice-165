@@ -119,7 +119,13 @@ public class Res extends RESTService {
       JSONArray result = new JSONArray();
 
       JSONObject i1 = new JSONObject(); 
-      i1.put("title", "Item 1");
+      i1.put("title", "Item 1"); 
+ 
+      JSONObject i2 = new JSONObject(); 
+      i2.put("title", "Item 2"); 
+ 
+      result.add(i1); 
+      result.add(i2);
 
       return Response.status(HttpURLConnection.HTTP_OK).entity(result.toJSONString()).build();
     }
